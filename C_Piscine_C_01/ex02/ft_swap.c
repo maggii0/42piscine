@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/06 10:09:20 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/08 11:06:04 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/08 11:44:15 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/08 11:48:53 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	rush(int i, int j);
-
-int	main(void)
+void	ft_swap(int *a, int *b)
 {
-	rush(5, 3);
-	return (0);
+	int	*c;
+
+	*b = &c;
+	*a = &b;
+	*c = &a;
 }
+
+/*
+int main(void)
+{
+  ft_swap(2, 4)
+  printf("%i\n", a, b);
+  return (0)
+}
+*/

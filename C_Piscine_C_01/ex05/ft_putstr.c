@@ -1,26 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 08:53:53 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/08 08:58:14 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/08 15:00:22 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/08 15:00:42 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void  ft_swap(int *a, int *b)
+void ft_putstr(char *str)
 {
-  *a = &b;
-  *b = &a;
-}
-
-int main(void)
-{
-  ft_swap(2, 4)
-  printf("%i\n", a, b);
-  return (0)
+	
 }
