@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 15:00:22 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/08 16:51:45 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/08 16:52:58 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/08 17:08:30 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_putstr(char *str)
+#include <unistd.h>
+#include <stdio.h>
+
+
+int	ft_strlen(char *str)
 {
 	int i;
-	i = 0;
 
+	i = 0;
 	while (str[i] != '\0')
 	{
-		write(1, &str[i], 1);
-		write(1, "\n", 1);
 		i++;
 	}
+	return i;
 }
 
 int	main(void)
 {
-	ft_putstr("patatahervida");
-	return (0);
+	printf("len: %i", ft_strlen("patatahervida"));
 }
