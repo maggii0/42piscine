@@ -6,26 +6,36 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 11:44:15 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/08 11:48:53 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/09 14:23:57 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_swap(int *a, int *b)
 {
-	int	*c;
+	int	c;
 
-	*b = &c;
-	*a = &b;
-	*c = &a;
+	c = *a;
+	*a = *b;
+	*b = c;
 }
 
 /*
 int main(void)
 {
-  ft_swap(2, 4)
-  printf("%i\n", a, b);
-  return (0)
+	int	*a;
+	int	*b;
+	int	num1;
+	int	num2;
+
+	num1 = 2;
+	num2 = 4;
+	a = &num1;
+	b = &num2;
+
+  ft_swap(a, b);
+  printf("%i%i\n", *a, *b);
 }
 */

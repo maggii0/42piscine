@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_strcopy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 13:38:01 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 13:42:30 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/09 13:46:48 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/09 15:40:48 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-void	ft_ultimate_div_mod(int *a, int *b)
-{
-	int	div;
-	int	mod;
+char	*ft_strcpy(char *dest, char *src)
+{	
+	int	i;
 
-	div = *a / *b;
-	mod = *a % *b;
-	*a = div;
-	*b = mod;
+	i = 0;
+	while (src[i])
+	{
+		src[i] = dest[i];
+		i++;
+	}
 }
 
-/*
-int	main(void)
+char	main(void)
 {
-	int	a;
-	int	b;
-
-	a = 5;
-	b = 5;
-	
-	ft_ultimate_div_mod(&a, &b);
-	printf("div: %i mod: %i", a, b);
+	ft_strcpy()	
 }
-*/

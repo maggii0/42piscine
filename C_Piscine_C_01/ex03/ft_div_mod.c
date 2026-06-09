@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 13:06:50 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/08 14:57:21 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/09 13:41:34 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	ft_div_mod(int a, int b, int *div, int *mod)
 	*div = a / b;
 	*mod = a % b;
 }
+
 /*
 int	main(void)
 {

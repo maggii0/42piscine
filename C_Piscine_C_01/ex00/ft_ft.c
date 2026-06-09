@@ -6,11 +6,10 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/07 10:11:41 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/07 18:00:00 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/09 11:51:59 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {

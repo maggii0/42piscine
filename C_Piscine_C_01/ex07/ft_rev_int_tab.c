@@ -1,39 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/08 13:38:01 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 13:42:30 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/09 09:39:46 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/09 13:44:54 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_ultimate_div_mod(int *a, int *b)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	div;
-	int	mod;
+	int	left;
+	int	right;
+	int	temp;
 
-	div = *a / *b;
-	mod = *a % *b;
-	*a = div;
-	*b = mod;
+	left = 0;
+	right = size - 1;
+	while (left < right)
+	{
+		temp = tab[left];
+		tab[left] = tab[right];
+		tab[right] = temp;
+		left++;
+		right--;
+	}
 }
 
 /*
 int	main(void)
 {
-	int	a;
-	int	b;
-
-	a = 5;
-	b = 5;
+	int	tab[5] = {1, 2, 3, 4, 5};
+	int	size;
+	int	i;
 	
-	ft_ultimate_div_mod(&a, &b);
-	printf("div: %i mod: %i", a, b);
+	size = 5;
+	
+	ft_rev_int_tab(tab, size);
+
+	i = 0;
+	while (i < size)
+	{
+		printf("%d ", tab[i]);
+		i++;
+	}
+	printf("\n");
+
+	return (0);
 }
 */
