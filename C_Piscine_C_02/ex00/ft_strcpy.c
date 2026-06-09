@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcopy.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 13:46:48 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 15:40:48 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/09 22:14:28 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 char	*ft_strcpy(char *dest, char *src)
-{	
+{
 	int	i;
 
 	i = 0;
 	while (src[i])
 	{
-		src[i] = dest[i];
+		dest[i] = src[i];
 		i++;
 	}
+	return (dest);
 }
 
-char	main(void)
+/*
+int main(void)
 {
-	ft_strcpy()	
+  char str1[] = "Hello World!";
+  char str2[30];
+  ft_strcpy(str2, str1);
+  printf("%s\n", str1);
+  printf("%s\n", str2);
 }
+*/
