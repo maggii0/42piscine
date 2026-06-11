@@ -6,7 +6,7 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 23:49:32 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/11 18:58:34 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/11 21:57:55 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -16,8 +16,8 @@ int	ft_str_is_alphanumeric(char c)
 	if ((c >= 'a' && c <= 'z')
 		|| (c >= 'A' && c <= 'Z')
 		|| (c >= '0' && c <= '9'))
-        	return (1);
-    	return (0);
+		return (1);
+	return (0);
 }
 
 char	*ft_strlower(char *str)
@@ -40,10 +40,8 @@ char	*ft_strcapitalize(char *str)
 
 	i = 0;
 	ft_strlower(str);
-	
 	if (str[0] >= 'a' && str[0] <= 'z')
 		str[0] -= 32;
-	
 	while (str[i])
 	{
 		if (i == 0)
@@ -60,7 +58,7 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-
+/*
 int	main(int argc, char * argv[])
 {
 	if (argc < 3)
@@ -69,3 +67,4 @@ int	main(int argc, char * argv[])
 		printf("Invalid argument");
 	return (0);
 }
+*/

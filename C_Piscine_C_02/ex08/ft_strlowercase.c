@@ -6,7 +6,7 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 23:34:21 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/11 19:06:14 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/11 21:39:37 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -24,7 +24,7 @@ char	*ft_strlowercase(char *str)
 	}
 	return (str);
 }
-
+/*
 int main(void)
 {
     char str1[] = "hello world";
@@ -37,3 +37,4 @@ int main(void)
     printf("%s\n", ft_strlowercase(str3));
     printf("%s\n", ft_strlowercase(str4));
 }
+*/
