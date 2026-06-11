@@ -6,23 +6,25 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 22:08:30 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 22:42:17 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/11 19:02:43 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char *ft_strncpy(char *dest, char *src, unsigned int n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-  unsigned int i;
-  
-  i = 0;
-  while (i < n)
-    {
-      dest[i] = src[i];
-      i++;
-    }
-    return (dest);
+	unsigned int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0'
+	return (dest);
 }
+
 /*
 int main() {
   char str1[] = "Hello World!";

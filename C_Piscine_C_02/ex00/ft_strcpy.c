@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 13:46:48 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 22:14:28 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/11 18:56:56 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,15 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
+	dest[i] = '\0'
 	return (dest);
 }
 
 /*
 int main(void)
 {
-  char str1[] = "Hello World!";
-  char str2[30];
+  char str1[] = "Hello World";
+  char str2[60];
   ft_strcpy(str2, str1);
   printf("%s\n", str1);
   printf("%s\n", str2);

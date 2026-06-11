@@ -6,23 +6,23 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 23:34:21 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 23:48:17 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/11 19:06:14 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char *ft_strlowercase(char *str)
+char	*ft_strlowercase(char *str)
 {
- int  i;
+	int	i;
 
-  i = 0;
-  while(str[i])
-  {
-    if (str[i] >= 'A' && str[i] <= 'Z')
-      str[i] = str[i] + 32;
-    i++;
-  }
-  return (str);
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+			str[i] = str[i] + 32;
+		i++;
+	}
+	return (str);
 }
 
 int main(void)

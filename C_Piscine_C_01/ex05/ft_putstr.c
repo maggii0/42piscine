@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 15:00:22 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/09 16:37:58 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/09 19:19:43 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -23,8 +23,10 @@ void	ft_putstr(char *str)
 	}
 }
 
+/*
 int	main(void)
 {
 	ft_putstr("patatahervida");
 	return (0);
 }
+*/
