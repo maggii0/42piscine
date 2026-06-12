@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowercase.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 23:34:21 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/11 21:39:37 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/12 11:00:32 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
 
-char	*ft_strlowercase(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
