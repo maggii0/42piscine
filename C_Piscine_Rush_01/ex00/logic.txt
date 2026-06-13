@@ -1,0 +1,2 @@
+si (col[i]top + col[i]bottom > 3 && col[i]top + col[i]bottom < 5)
+	return 0;
