@@ -1,47 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/13 08:45:07 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/15 15:10:01 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/15 16:45:48 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/15 18:28:23 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
-#include <string.h>
-#include <stdio.h>
 
-char	*ft_strcat(char *dest, char *src)
+void	ft_putchar(char c)
 {
-	int	i;
-	int	j;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	j = 0;
-	while (dest[i])
-		i++;
-	while (src[j])
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if (nb >= 0 && nb < 10)
+		ft_putchar(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }
 /*
 int	main(void)
 {
-	char myStr[20] = "Hello";
-	char defStr[20] = "Hello";
-
-	strcat(defStr, " World!");
-	ft_strcat(myStr, " World!");
-
-	printf("My func: %s \n", myStr);
-	printf("Def func: %s", defStr);
-	return(0);
+	ft_putnbr(123);
+	return 0;
 }
 */

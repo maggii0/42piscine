@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/13 08:45:07 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/15 12:12:46 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/15 15:10:25 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -31,7 +31,7 @@ char	*ft_strncat(char *dest, char *src, unsigned int nb)
 	dest[i] = '\0';
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	char myStr[20] = "Hello";
@@ -44,3 +44,4 @@ int	main(void)
 	printf("Def func: %s", defStr);
 	return(0);
 }
+*/
