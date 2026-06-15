@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 18:32:08 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/15 18:51:57 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/15 22:36:51 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,27 @@
 - Iterate until !(str[i] > 0 && str[i] < 9)
 - return(int)
  */
+#include <stdio.h>
 int ft_atoi(char *str)
 {
+	int	i;
+	int negative_c;
 
+	i = 0;
+	negative_c = 0;
+	while (str[i] == ' ')
+		i++;
+	while(str[i] == '+' || str[i] == '-')
+	{
+		if (str[i] == '-')
+			negative_c++;
+		i++;
+	}
+	while(str[i] > 0 && str[i] < 9)
+}
+
+int	main(void)
+{
+	ft_atoi("      ---+--+1234ab567");
+	return (0);
 }
