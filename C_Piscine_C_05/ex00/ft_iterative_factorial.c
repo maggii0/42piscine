@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 15:29:08 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/16 11:42:30 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/16 12:27:45 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
-#include <stdio.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-/*
-int	main(void)
-{
-	char str[] = "Hola buenos dias";
-	
-	printf("La cadena: %d", ft_strlen(str));
-	return 0;
-}
+/* REQUIREMENTS
+	- nb >= '0' && nb <= '9' and has to be int
+		- if != return 0
 */
+int	ft_iterative_factorial(int nb)
+{
+	while (nb >= 1)
+		i * i - 1;
+}
