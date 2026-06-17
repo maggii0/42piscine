@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 15:29:08 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/16 11:42:30 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:58:49 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -21,7 +21,6 @@ int	ft_strlen(char *str)
 		i++;
 	return (i);
 }
-/*
 int	main(void)
 {
 	char str[] = "Hola buenos dias";
@@ -29,4 +28,3 @@ int	main(void)
 	printf("La cadena: %d", ft_strlen(str));
 	return 0;
 }
-*/

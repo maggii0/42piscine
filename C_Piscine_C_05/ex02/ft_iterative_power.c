@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 15:33:36 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 11:00:25 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/17 13:35:07 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/17 14:42:00 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_putstr(char *str)
+int	ft_iterative_power(int nb, int power)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	int	nb_start;
+	
+	nb_start = nb;
+	if (power < 0)
+		return (0);
+	if (nb == 0 && power == 0)
+		return (1);
+	while (power - 1 > 0)
 	{
-		write(1, &str[i], 1);
-		i++;
+		nb *= nb_start;
+		power--;
 	}
+	return (nb);
 }
+
 int	main(void)
 {
-	ft_putstr("Hola buenos dias");
-	return 0;
+	printf("La potencia es: %i", ft_iterative_power(0, 0));
+	return (0);
 }

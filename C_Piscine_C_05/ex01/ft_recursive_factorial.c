@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 15:33:36 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 11:00:25 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/17 10:44:02 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/17 13:34:07 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_putstr(char *str)
+int	ft_recursive_factorial(int nb)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	if (nb < 0)
+		return (0);
+	if (nb < 1)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
 }
+
 int	main(void)
 {
-	ft_putstr("Hola buenos dias");
-	return 0;
+	printf("Factorial (de forma recursiva) del numero proporcionat es: %i", ft_recursive_factorial(0));
+	return (0);
 }

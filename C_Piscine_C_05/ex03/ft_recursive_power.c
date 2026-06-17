@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 15:33:36 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 11:00:25 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/17 14:38:24 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/17 14:56:00 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 #include <stdio.h>
 
-void	ft_putstr(char *str)
+int	ft_recursive_power(int nb, int power)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	return (nb * ft_recursive_power(nb, power - 1));
 }
+
 int	main(void)
 {
-	ft_putstr("Hola buenos dias");
-	return 0;
+	printf("Potencia (de forma recursiva) del numero proporcionat es: %i", ft_recursive_power(5, 2));
 }

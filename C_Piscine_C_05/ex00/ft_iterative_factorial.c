@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/16 22:01:21 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/17 10:43:29 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,17 +19,18 @@ int	ft_iterative_factorial(int nb)
 {
 	int	i;
 
-	i = 0;
-	while (nb >= 1)
+	i = 1;
+	if (nb < 0)
+		return (0);
+	while (nb > 1)
 	{
-		i = nb * (nb - 1);
+		i *= nb;
 		nb--;
 	}
 	return (i);
 }
-
 int	main(void)
 {
-	printf("Factorial del numero proporcionat es: %i", ft_iterative_factorial(4));
+	printf("Factorial del numero proporcionat es: %i", ft_iterative_factorial(-6));
 	return (0);
 }

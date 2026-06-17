@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/15 15:33:36 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 11:00:25 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/17 14:56:51 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/17 15:25:28 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
-
-void	ft_putstr(char *str)
+int	ft_fibonacci(int index)
 {
 	int	i;
 
 	i = 0;
-	while (str[i] != '\0')
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-int	main(void)
-{
-	ft_putstr("Hola buenos dias");
-	return 0;
+	if (index < 0)
+		return (-1);
+	if (index == 0 || index == 1 || index == 2)
+		return (1);
+	while (i < 0)
+		index
 }

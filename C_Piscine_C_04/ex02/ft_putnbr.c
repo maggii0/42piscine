@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 16:45:48 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/16 11:43:47 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/17 11:02:51 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -36,10 +36,8 @@ void	ft_putnbr(int nb)
 		ft_putnbr(nb % 10);
 	}
 }
-/*
 int	main(void)
 {
 	ft_putnbr(123);
 	return 0;
 }
-*/
