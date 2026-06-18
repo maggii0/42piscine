@@ -6,7 +6,7 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 20:00:35 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/18 18:03:52 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/18 22:47:51 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -15,8 +15,8 @@ int	ft_sqrt(int nb)
 {
 	int	i;
 
-	i = 1;
-	if (nb < 0 || i % 2 != 0)
+	i = 0;
+	if (nb < 0)
 		return (0);
 	while (i * i <= nb)
 	{
@@ -24,13 +24,16 @@ int	ft_sqrt(int nb)
 			return (i);
 		i++;
 	}
-	return (i);
-}
-
-/*
-int	main(void)
-{
-	printf("La arrel quadrada del numero proporcionat es: %i", ft_sqrt(5));
 	return (0);
 }
-*/
+
+int	main(void)
+{
+	printf("La arrel quadrada %i es: %i\n", 0, ft_sqrt(0));
+	printf("La arrel quadrada %i es: %i\n", 1, ft_sqrt(1));
+	printf("La arrel quadrada %i es: %i\n", 2, ft_sqrt(2));
+	printf("La arrel quadrada %i es: %i\n", 4, ft_sqrt(4));
+	printf("La arrel quadrada %i es: %i\n", 16, ft_sqrt(16));
+	printf("La arrel quadrada %i es: %i\n", -16, ft_sqrt(-16));
+	return (0);
+}

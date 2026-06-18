@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 13:35:07 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/18 18:02:45 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/18 22:34:45 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -18,6 +18,8 @@ int	ft_iterative_power(int nb, int power)
 	nb_start = nb;
 	if (power < 0)
 		return (0);
+	if (nb != 0 && power == 0)
+		return (nb);
 	if (nb == 0 && power == 0)
 		return (1);
 	while (power - 1 > 0)
@@ -27,10 +29,9 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (nb);
 }
-/*
+
 int	main(void)
 {
-	printf("La potencia es: %i", ft_iterative_power(0, 0));
+	printf("La potencia es: %i", ft_iterative_power(46, 2));
 	return (0);
 }
-*/
