@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 10:44:02 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 13:34:07 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/17 20:02:42 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -19,9 +19,11 @@ int	ft_recursive_factorial(int nb)
 		return (1);
 	return (nb * ft_recursive_factorial(nb - 1));
 }
-
+/*
 int	main(void)
 {
-	printf("Factorial (de forma recursiva) del numero proporcionat es: %i", ft_recursive_factorial(0));
+	printf("Factorial (de forma recursiva) del numero proporcionat es: 
+	%i", ft_recursive_factorial(0));
 	return (0);
 }
+*/

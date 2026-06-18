@@ -1,39 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 20:01:51 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/17 20:00:35 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/17 21:24:50 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <stdio.h>
-/* REQUIREMENTS
-	- nb >= '0' && nb <= '9' and has to be int
-		- if != return 0
-*/
-int	ft_iterative_factorial(int nb)
+
+int	ft_sqrt(int nb)
 {
 	int	i;
 
 	i = 1;
 	if (nb < 0)
 		return (0);
-	while (nb > 1)
-	{
-		i *= nb;
-		nb--;
-	}
-	return (i);
+	if (!(i * i == nb))
+		return (ft_sqrt(i + 1));
 }
-/*
+
 int	main(void)
 {
-	printf("Factorial del numero proporcionat es: 
-	%i", ft_iterative_factorial(-6));
+	printf("La arrel quadrada del numero proporcionat es: %i", ft_sqrt(16));
 	return (0);
 }
-*/
