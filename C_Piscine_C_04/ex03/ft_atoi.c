@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/15 18:32:08 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/17 11:05:21 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/21 06:49:06 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ int	ft_atoi(char *str)
 }
 int	main(void)
 {
-	printf("%i", ft_atoi("      ---+--+1234ab567"));
+	printf("%i", ft_atoi("      ---+--+a1234ab567"));
 	return (0);
 }

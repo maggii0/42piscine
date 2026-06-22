@@ -6,7 +6,7 @@
 /*   By: gmaggior <gmaggior@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/09 23:49:32 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/11 21:57:55 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/21 00:52:17 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -58,7 +58,7 @@ char	*ft_strcapitalize(char *str)
 	}
 	return (str);
 }
-/*
+
 int	main(int argc, char * argv[])
 {
 	if (argc < 3)
@@ -67,4 +67,3 @@ int	main(int argc, char * argv[])
 		printf("Invalid argument");
 	return (0);
 }
-*/

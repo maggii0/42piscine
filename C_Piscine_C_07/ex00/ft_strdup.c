@@ -1,15 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_program_name.c                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/18 18:18:37 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/21 01:01:16 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/21 01:15:26 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/22 16:20:08 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
 
 int	ft_strlen(char *str)
 {
@@ -21,21 +23,37 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	main(int argc, char *argv[])
+char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
 	i = 0;
-	if (argc == 1)
+	while (src[i])
 	{
-		while (ft_strlen(&argv[0][i]))
-		{
-			write(1, &argv[0][i], 1);
-			i++;
-		}
-		write(1, "\n", 1);
-		return (0);
+		dest[i] = src[i];
+		i++;
 	}
-	else
-		return (1);
+	dest[i] = '\0';
+	return (dest);
 }
+
+char	*ft_strdup(char *src)
+{
+	char	*array;
+
+	array = malloc((ft_strlen(src) + 1));
+	if (!src)
+		return (NULL);
+	if (array == NULL)
+		return (NULL);
+	ft_strcpy(array, src);
+	return (array);
+}
+
+/*
+int	main(void)
+{
+	printf("La cadena es: %s", ft_strdup("Hola, buenos dias"));
+	return (0);
+}
+*/

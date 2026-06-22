@@ -6,7 +6,7 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/18 18:18:37 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/18 23:26:25 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/21 01:08:11 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
@@ -19,13 +19,10 @@ int	main(int argc, char *argv[])
 	i = 1;
 	j = 0;
 	if (argc <= 1)
-	{
-		write(1, "Insuficient parameters", 22);
 		return (0);
-	}
 	else
 	{
-		while (i <= argc - 1)
+		while (i < argc)
 		{
 			write(1, &argv[i][j], 1);
 			j++;

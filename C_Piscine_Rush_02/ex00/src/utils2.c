@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/21 05:00:07 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/21 07:52:02 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/21 07:52:51 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <stdio.h>
-/* REQUIREMENTS
-	- nb >= '0' && nb <= '9' and has to be int
-		- if != return 0
-*/
-int	ft_iterative_factorial(int nb)
+void	ft_putchar(char c)
 {
-	int	i;
+	write(1, &c, 1);
+}
 
-	i = 1;
-	if (nb < 0)
-		return (0);
-	while (nb > 1)
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
 	{
-		i *= nb;
-		nb--;
+		write(1, "-2147483648", 11);
+		return ;
 	}
-	return (i);
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if (nb >= 0 && nb < 10)
+		ft_putchar(nb + '0');
+	else
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
 }
 int	main(void)
 {
-	printf("Factorial del numero proporcionat es: %i"
-	, ft_iterative_factorial(0));
-	return (0);
+	ft_putnbr(123);
+	return 0;
 }

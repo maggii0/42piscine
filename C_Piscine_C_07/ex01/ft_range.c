@@ -1,37 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/21 05:00:07 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/21 03:18:41 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/21 06:04:12 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <stdlib.h>
 #include <stdio.h>
-/* REQUIREMENTS
-	- nb >= '0' && nb <= '9' and has to be int
-		- if != return 0
-*/
-int	ft_iterative_factorial(int nb)
+
+int	*ft_range(int min, int max)
 {
 	int	i;
+	int	*array;
+	int	length;
 
-	i = 1;
-	if (nb < 0)
-		return (0);
-	while (nb > 1)
+	array = malloc((max - min) * sizeof(int));
+	length = max - min;
+	i = 0;
+	if (!array)
+		return (NULL);
+	if (min >= max)
+		return (NULL);
+	while (i < length)
 	{
-		i *= nb;
-		nb--;
+		array[i] = min++;
+		i++;
 	}
-	return (i);
+	return (array);
 }
+
+/*
 int	main(void)
 {
-	printf("Factorial del numero proporcionat es: %i"
-	, ft_iterative_factorial(0));
+	int i = 0;
+	int a = 2;
+	int b = 7;
+	int len = b - a;
+	int *arr = ft_range(a, b);
+
+	while (i < len)
+		printf("%i", arr[i++]);
+	free(arr);
 	return (0);
 }
+*/

@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_rev_params.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 11:57:12 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/21 05:00:07 by gmaggior         ###   ########.fr       */
+/*   Created: 2026/06/18 18:18:37 by gmaggior          #+#    #+#             */
+/*   Updated: 2026/06/21 01:09:27 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-#include <stdio.h>
-/* REQUIREMENTS
-	- nb >= '0' && nb <= '9' and has to be int
-		- if != return 0
-*/
-int	ft_iterative_factorial(int nb)
+int	main(int argc, char *argv[])
 {
 	int	i;
+	int	j;
 
-	i = 1;
-	if (nb < 0)
+	i = argc -1;
+	j = 0;
+	if (argc <= 1)
 		return (0);
-	while (nb > 1)
+	else
 	{
-		i *= nb;
-		nb--;
+		while (i != 0)
+		{
+			write(1, &argv[i][j], 1);
+			j++;
+			if (argv[i][j] == '\0')
+			{
+				write(1, "\n", 1);
+				j = 0;
+				i--;
+			}
+		}
 	}
-	return (i);
-}
-int	main(void)
-{
-	printf("Factorial del numero proporcionat es: %i"
-	, ft_iterative_factorial(0));
 	return (0);
 }
+/*
+Controlamos hasta argc - 1 porque argc final es valor NULL 
+entonces nos da segmentation fault
+*/
