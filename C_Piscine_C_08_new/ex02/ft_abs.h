@@ -6,13 +6,12 @@
 /*   By: gmaggior <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 21:56:39 by gmaggior          #+#    #+#             */
-/*   Updated: 2026/06/26 06:47:30 by gmaggior         ###   ########.fr       */
+/*   Updated: 2026/06/26 07:36:10 by gmaggior         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_ABS_H
+#ifndef FT_ABS_H
 # define FT_ABS_H 
 
 # define ABS(Value) ((Value) < 0 ? -(Value) : (Value))
-
 #endif
